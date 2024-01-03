@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   return (
     <>
       <Box bg='purple.700' py={4}>
-        <Container maxW='1214px'>
+        <Container maxW='1250px'>
           <Image src={Logo}
             aria-label='Logo'
             alt='Logo'>
