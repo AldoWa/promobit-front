@@ -10,7 +10,9 @@ interface ButtonFilterProps {
   isSelected: boolean
 }
 
-const ButtonFilter: React.FC<ButtonFilterProps> = ({ isSelected, text }) => {
+const ButtonFilter: React.FC<ButtonFilterProps> = ({ text }) => {
+  const [isSelected, setIsSelected] = React.useState(false);
+
   if (isSelected) {
     return (
       <Box color='white' bg='orange.500'
@@ -22,6 +24,7 @@ const ButtonFilter: React.FC<ButtonFilterProps> = ({ isSelected, text }) => {
         alignItems='center'
         borderRadius={4}
         as="button"
+        onClick={() => setIsSelected(false)}
       >
         <Text fontSize='1rem' lineHeight='24px' textAlign='center'>
           {text}
@@ -45,6 +48,7 @@ const ButtonFilter: React.FC<ButtonFilterProps> = ({ isSelected, text }) => {
       justifyContent='center'
       borderRadius={4}
       as="button"
+      onClick={() => setIsSelected(true)}
     >
       <Text fontSize='1rem' lineHeight='24px' textAlign='center'>
         {text}
