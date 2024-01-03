@@ -16,7 +16,6 @@ const ButtonFilter: React.FC<ButtonFilterProps> = ({ isSelected, text }) => {
       <Box color='white' bg='orange.500'
         py={2}
         px={4}
-        maxW={140}
         height={10}
         display='flex'
         justifyContent='center'
@@ -41,14 +40,13 @@ const ButtonFilter: React.FC<ButtonFilterProps> = ({ isSelected, text }) => {
     <Box color='black' bg='white'
       py={2}
       px={4}
-      maxW={140}
       height={10}
       display='flex'
       justifyContent='center'
       borderRadius={4}
       as="button"
     >
-      <Text fontSize={4} lineHeight='24px' textAlign='center'>
+      <Text fontSize='1rem' lineHeight='24px' textAlign='center'>
         {text}
       </Text>
     </Box>
