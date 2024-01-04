@@ -1,17 +1,35 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import { Box, Image, Text } from '@chakra-ui/react';
 
 import Close from '../assets/close.svg';
+import { GenresContext } from '../context/genresContext';
 
 
-interface ButtonFilterProps {
+interface GenresProps {
   text: string;
-  isSelected: boolean
+  id: number;
+  handleGenre: (id: number, type: 'add' | 'remove') => void;
 }
 
-const ButtonFilter: React.FC<ButtonFilterProps> = ({ text }) => {
+const Genres: React.FC<GenresProps> = ({ text, id, handleGenre }) => {
   const [isSelected, setIsSelected] = React.useState(false);
+
+  const { genresIDsSelected } = useContext(GenresContext)
+
+  useEffect(() => {
+    const isGenreSelected = genresIDsSelected.find(genre => genre === id)
+    setIsSelected(!!isGenreSelected)
+  }, [genresIDsSelected, id])
+
+  const handleClick = () => {
+    setIsSelected(!isSelected)
+    if (!isSelected) {
+      handleGenre(id, 'add')
+      return;
+    }
+    handleGenre(id, 'remove')
+  }
 
   if (isSelected) {
     return (
@@ -24,7 +42,7 @@ const ButtonFilter: React.FC<ButtonFilterProps> = ({ text }) => {
         alignItems='center'
         borderRadius={4}
         as="button"
-        onClick={() => setIsSelected(false)}
+        onClick={handleClick}
       >
         <Text fontSize='1rem' lineHeight='24px' textAlign='center'>
           {text}
@@ -48,7 +66,7 @@ const ButtonFilter: React.FC<ButtonFilterProps> = ({ text }) => {
       justifyContent='center'
       borderRadius={4}
       as="button"
-      onClick={() => setIsSelected(true)}
+      onClick={handleClick}
     >
       <Text fontSize='1rem' lineHeight='24px' textAlign='center'>
         {text}
@@ -57,4 +75,4 @@ const ButtonFilter: React.FC<ButtonFilterProps> = ({ text }) => {
   );
 };
 
-export default ButtonFilter;
+export default Genres;

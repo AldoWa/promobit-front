@@ -1,25 +1,26 @@
-import React from 'react';
-import ButtonFilter from './ButtonFilter';
+import React, { useContext } from 'react';
+import Genres from './Genres';
 import { HStack, Text, VStack } from '@chakra-ui/react';
+import { GenresContext } from '../context/genresContext';
 
 interface Genres {
   id: number;
   name: string;
 }
-interface FilterProps {
-  genres: Genres[];
-}
 
-const Filter: React.FC<FilterProps> = ({ genres }) => {
+const Filter: React.FC = () => {
+  const { genres, handleGenre } = useContext(GenresContext);
+
   return (
     <VStack spacing={4}>
       <Text fontSize='0.875rem' fontWeight={700} color='white'>FILTRE POR:</Text>
       <HStack flexWrap='wrap' justifyContent='center'>
         {genres.map(genre => (
-          <ButtonFilter
+          <Genres
             key={genre.id}
             text={genre.name}
-            isSelected={false}
+            id={genre.id}
+            handleGenre={handleGenre}
           />
         ))}
       </HStack>

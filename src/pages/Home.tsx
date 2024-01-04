@@ -4,12 +4,16 @@ import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Movies from '../components/Movies';
 
+import { GenresProvider } from '../context/genresContext';
+
 const Home: React.FC = () => {
   return (
     <>
       <Header />
-      <Banner />
-      <Movies />
+      <GenresProvider>
+        <Banner />
+        <Movies />
+      </GenresProvider>
     </>
   );
 };
