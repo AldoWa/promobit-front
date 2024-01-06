@@ -3,17 +3,17 @@
 exports[`Banner Should match snapshot 1`] = `
 <div>
   <div
-    class="css-shrtae"
+    class="css-jrj1g6"
     data-testid="banner-box"
   >
     <div
-      class="chakra-container css-1hs5bnt"
+      class="chakra-container css-dao7be"
     >
       <div
-        class="chakra-stack css-o9yjr2"
+        class="chakra-stack css-lkfci8"
       >
         <p
-          class="chakra-text css-p7o7s7"
+          class="chakra-text css-tnh8y4"
           data-testid="banner-text"
         >
           Milhões de filmes, séries e pessoas para descobrir. Explore já.
@@ -21,9 +21,5 @@ exports[`Banner Should match snapshot 1`] = `
       </div>
     </div>
   </div>
-  <span
-    hidden=""
-    id="__chakra_env"
-  />
 </div>
 `;

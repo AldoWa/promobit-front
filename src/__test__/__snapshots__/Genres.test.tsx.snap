@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Genres Should match snapshot 1`] = `
+<div>
+  <button
+    class="css-1ru2wq5"
+    data-testid="genre"
+  >
+    <p
+      class="chakra-text css-1544uh1"
+      data-testid="genre-text"
+    >
+      Action
+    </p>
+  </button>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;

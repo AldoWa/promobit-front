@@ -3,11 +3,11 @@
 exports[`Header Should match snapshot 1`] = `
 <div>
   <div
-    class="css-qbb6fp"
+    class="css-1x3bh1w"
     data-testid="header-box"
   >
     <div
-      class="chakra-container css-1kw8fss"
+      class="chakra-container css-zmt2a7"
       data-testid="header-container"
     >
       <img
@@ -18,9 +18,5 @@ exports[`Header Should match snapshot 1`] = `
       />
     </div>
   </div>
-  <span
-    hidden=""
-    id="__chakra_env"
-  />
 </div>
 `;

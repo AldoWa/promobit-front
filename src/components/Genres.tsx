@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import { Box, Image, Text } from '@chakra-ui/react';
 
@@ -13,7 +13,7 @@ interface GenresProps {
 }
 
 const Genres: React.FC<GenresProps> = ({ text, id, handleGenre }) => {
-  const [isSelected, setIsSelected] = React.useState(false);
+  const [isSelected, setIsSelected] = useState(false);
 
   const { genresIDsSelected } = useContext(GenresContext)
 
@@ -43,8 +43,9 @@ const Genres: React.FC<GenresProps> = ({ text, id, handleGenre }) => {
         borderRadius={4}
         as="button"
         onClick={handleClick}
+        data-testid='genre-selected'
       >
-        <Text fontSize='1rem' lineHeight='24px' textAlign='center'>
+        <Text fontSize='1rem' lineHeight='24px' textAlign='center' data-testid='genre-selected-text'>
           {text}
         </Text>
         <Image
@@ -67,8 +68,9 @@ const Genres: React.FC<GenresProps> = ({ text, id, handleGenre }) => {
       borderRadius={4}
       as="button"
       onClick={handleClick}
+      data-testid='genre'
     >
-      <Text fontSize='1rem' lineHeight='24px' textAlign='center'>
+      <Text fontSize='1rem' lineHeight='24px' textAlign='center' data-testid='genre-text'>
         {text}
       </Text>
     </Box>

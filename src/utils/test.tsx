@@ -1,21 +1,21 @@
 import { RenderOptions, render } from '@testing-library/react'
 
 import { ChakraProvider } from '@chakra-ui/react'
+import { GenresContextData, GenresContext } from '../context/genresContext'
 
-interface AllTheProvidersProps {
-  children: React.ReactNode
+interface CustomRenderOptions extends RenderOptions {
+  providerProps: GenresContextData
 }
 
-const AllTheProviders = ({children}: AllTheProvidersProps) => {
-  return (
+const customRender = (ui:React.ReactElement, { providerProps , ...renderProps }: CustomRenderOptions) =>
+  render(
     <ChakraProvider>
-      {children}
-    </ChakraProvider>
+      <GenresContext.Provider value={{ ...providerProps }}>
+        {ui}
+      </GenresContext.Provider>
+    </ChakraProvider>,
+    renderProps
   )
-}
-
-const customRender = (ui:React.ReactElement, options?: RenderOptions) =>
-  render(ui, {wrapper: AllTheProviders, ...options})
 
 // eslint-disable-next-line react-refresh/only-export-components
 export * from '@testing-library/react'

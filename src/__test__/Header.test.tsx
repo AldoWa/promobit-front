@@ -1,5 +1,12 @@
-import { render, screen } from "../utils/test"
+
+import { render, screen } from "@testing-library/react";
 import Header from "../components/Header";
+
+jest.mock('../services/api.ts', () => {
+	return {
+    AUTHORIZATION: 'XXXX'
+  }
+})
 
 describe('Header', () => {
   test("Should render the header", () => {
