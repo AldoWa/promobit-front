@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieCard Should match snapshot 1`] = `
+<div>
+  <div
+    class="css-u7hjmf"
+  >
+    <button>
+      <div
+        class="chakra-skeleton css-zeffls"
+      />
+      <p
+        class="chakra-text css-mgmy18"
+        data-testid="movieCard-title"
+      >
+        Mortal Kombat
+      </p>
+      <p
+        class="chakra-text css-1x7nkyx"
+        data-testid="movieCard-year"
+      >
+        2021
+      </p>
+    </button>
+  </div>
+</div>
+`;
