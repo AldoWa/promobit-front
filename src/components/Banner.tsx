@@ -6,14 +6,14 @@ import { Box, Container, VStack, Text } from '@chakra-ui/react';
 
 const Banner: React.FC = () => {
   return (
-    <Box height={449} bg='purple.900'>
+    <Box height={449} bg='purple.900' data-testid="banner-box">
       <Container maxW={1033} height='100%' alignItems='center'>
         <VStack
           spacing={10}
           height='100%'
           justifyContent='center'
         >
-          <Text fontSize='5xl' color='white' fontWeight='bold' textAlign={'center'} lineHeight='56px'>
+          <Text fontSize='5xl' color='white' fontWeight='bold' textAlign={'center'} lineHeight='56px' data-testid="banner-text">
             Milhões de filmes, séries e pessoas para descobrir. Explore já.
           </Text>
           <Filter />

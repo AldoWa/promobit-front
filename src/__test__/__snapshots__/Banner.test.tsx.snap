@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner Should match snapshot 1`] = `
+<div>
+  <div
+    class="css-shrtae"
+    data-testid="banner-box"
+  >
+    <div
+      class="chakra-container css-1hs5bnt"
+    >
+      <div
+        class="chakra-stack css-o9yjr2"
+      >
+        <p
+          class="chakra-text css-p7o7s7"
+          data-testid="banner-text"
+        >
+          Milhões de filmes, séries e pessoas para descobrir. Explore já.
+        </p>
+      </div>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;
