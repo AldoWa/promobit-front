@@ -51,7 +51,6 @@ const Genres: React.FC<GenresProps> = ({ text, id, handleGenre }) => {
         <Image
           ml={2}
           src={Close}
-          aria-label='Close'
           alt='Close icon'
         />
       </Box>

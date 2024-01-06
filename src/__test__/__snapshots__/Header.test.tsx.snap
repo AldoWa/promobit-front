@@ -12,7 +12,6 @@ exports[`Header Should match snapshot 1`] = `
     >
       <img
         alt="Logo"
-        aria-label="Logo"
         class="chakra-image css-0"
         data-testid="header-logo"
       />

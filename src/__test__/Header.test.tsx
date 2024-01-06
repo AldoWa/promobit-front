@@ -9,14 +9,14 @@ jest.mock('../services/api.ts', () => {
 })
 
 describe('Header', () => {
-  test("Should render the header", () => {
+  it("Should render the header", () => {
     render(<Header />)
     const element = screen.getByTestId('header-box')
     expect(element).toBeInTheDocument()
     expect(element).toBeVisible()
 })
 
-  test("Should match snapshot", () => {
+  it("Should match snapshot", () => {
     const { container } = render(<Header />)
     expect(container).toMatchSnapshot();
   })

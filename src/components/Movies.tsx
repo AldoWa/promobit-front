@@ -25,7 +25,6 @@ const Movies: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([])
   const [maxTotalPages,] = useState<number>(500)
   const [actualPage, setActualPage] = useState<number>(1)
-  const [pagination, setPagination] = useState<number[]>([1, 2, 3, 4, 5])
 
   const { genresIDsSelected, resetGenresSelected } = useContext(GenresContext)
 
@@ -48,21 +47,7 @@ const Movies: React.FC = () => {
       setMovies(data.results)
       setActualPage(data.page)
 
-      if (page <= 2) {
-        setPagination([1, 2, 3, 4, 5])
-        return
-      }
-
-      if (page === maxTotalPages) {
-        setPagination([page - 4, page - 3, page - 2, page - 1, page])
-        return
-      }
-
-      if (page === maxTotalPages - 1) {
-        setPagination([page - 3, page - 2, page - 1, page, page + 1])
-        return
-      }
-      setPagination([page - 2, page - 1, page, page + 1, page + 2])
+   
     } catch (error) {
       console.log(error)
     }
@@ -93,7 +78,6 @@ const Movies: React.FC = () => {
         </Grid>
       }
       <Pagination
-        pagination={pagination}
         handlePage={handlePage}
         maxTotalPages={maxTotalPages}
         actualPage={actualPage}
