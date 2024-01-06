@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Should match snapshot 1`] = `
+<div>
+  <div
+    class="css-qbb6fp"
+    data-testid="header-box"
+  >
+    <div
+      class="chakra-container css-1kw8fss"
+      data-testid="header-container"
+    >
+      <img
+        alt="Logo"
+        aria-label="Logo"
+        class="chakra-image css-0"
+        data-testid="header-logo"
+      />
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;

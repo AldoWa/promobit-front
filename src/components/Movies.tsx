@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import { Container, Grid, Text } from '@chakra-ui/react';
 
@@ -22,12 +22,12 @@ interface MoviesResponse {
 }
 
 const Movies: React.FC = () => {
-  const [movies, setMovies] = React.useState<Movie[]>([])
-  const [maxTotalPages,] = React.useState<number>(500)
-  const [actualPage, setActualPage] = React.useState<number>(1)
-  const [pagination, setPagination] = React.useState<number[]>([1, 2, 3, 4, 5])
+  const [movies, setMovies] = useState<Movie[]>([])
+  const [maxTotalPages,] = useState<number>(500)
+  const [actualPage, setActualPage] = useState<number>(1)
+  const [pagination, setPagination] = useState<number[]>([1, 2, 3, 4, 5])
 
-  const { genresIDsSelected, resetGenresSelected } = React.useContext(GenresContext)
+  const { genresIDsSelected, resetGenresSelected } = useContext(GenresContext)
 
   useEffect(() => {
     const getMovies = async () => {
