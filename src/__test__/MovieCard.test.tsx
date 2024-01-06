@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
-import MovieCard from "../components/MovieCard";
+import { render, screen } from '@testing-library/react';
+import MovieCard from '../components/MovieCard';
 
 describe('MovieCard', () => {
   it('Should render the MovieCard with the props', async () => {

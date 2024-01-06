@@ -13,8 +13,8 @@ const Filter: React.FC = () => {
 
   return (
     <VStack spacing={4}>
-      <Text fontSize='0.875rem' fontWeight={700} color='white'>FILTRE POR:</Text>
-      <HStack flexWrap='wrap' justifyContent='center'>
+      <Text fontSize='0.875rem' fontWeight={700} color='white' data-testid="filter-text">FILTRE POR:</Text>
+      <HStack flexWrap='wrap' justifyContent='center' data-testid="filter-genres">
         {genres.map(genre => (
           <Genres
             key={genre.id}

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filter Should match snapshot 1`] = `
+<div>
+  <div
+    class="chakra-stack css-o51fhk"
+  >
+    <p
+      class="chakra-text css-49y51g"
+      data-testid="filter-text"
+    >
+      FILTRE POR:
+    </p>
+    <div
+      class="chakra-stack css-1b1m5zm"
+      data-testid="filter-genres"
+    >
+      <button
+        class="css-1ru2wq5"
+        data-testid="genre"
+      >
+        <p
+          class="chakra-text css-1544uh1"
+          data-testid="genre-text"
+        >
+          Action
+        </p>
+      </button>
+      <button
+        class="css-1ru2wq5"
+        data-testid="genre"
+      >
+        <p
+          class="chakra-text css-1544uh1"
+          data-testid="genre-text"
+        >
+          Drama
+        </p>
+      </button>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;

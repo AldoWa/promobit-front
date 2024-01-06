@@ -1,6 +1,6 @@
 
-import { render, screen } from "@testing-library/react";
-import Header from "../components/Header";
+import { render, screen } from '@testing-library/react';
+import Header from '../components/Header';
 
 jest.mock('../services/api.ts', () => {
 	return {

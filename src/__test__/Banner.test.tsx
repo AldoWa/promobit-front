@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
-import Banner from "../components/Banner";
+import { render, screen } from '@testing-library/react';
+import Banner from '../components/Banner';
 
 jest.mock('../services/api.ts', () => {
 	return {

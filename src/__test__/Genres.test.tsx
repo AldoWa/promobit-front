@@ -1,6 +1,6 @@
-import Genres from "../components/Genres"
-import { GenresContextData } from "../context/genresContext"
-import { screen, render, fireEvent } from "../utils/test"
+import Genres from '../components/Genres'
+import { GenresContextData } from '../context/genresContext'
+import { screen, render, fireEvent } from '../utils/test'
 
 jest.mock('../services/api.ts', () => {
 	return {
