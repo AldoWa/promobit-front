@@ -11,11 +11,11 @@ interface Genre {
   name: string;
 }
 
-interface GenresResponse {
+export interface GenresResponse {
   genres: Genre[];
 }
 
-interface GenresContextData {
+export interface GenresContextData {
   genres: Genre[];
   handleGenre: (id: number, type: 'add' | 'remove') => void;
   genresIDsSelected: number[];
