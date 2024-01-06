@@ -9,7 +9,6 @@ const Header: React.FC = () => {
       <Box bg='purple.700' py={4} data-testid="header-box">
         <Container maxW='1250px' data-testid="header-container">
           <Image src={Logo}
-            aria-label='Logo'
             alt='Logo'
             data-testid="header-logo"
           >

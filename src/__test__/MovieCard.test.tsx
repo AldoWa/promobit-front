@@ -15,7 +15,7 @@ describe('MovieCard', () => {
     expect(yearMovie).toHaveTextContent('2021')
   });
 
-  test("Should match snapshot", () => {
+  it("Should match snapshot", () => {
     const { container } = render(<MovieCard src='aletory' title='Mortal Kombat' year='2021' />)
     expect(container).toMatchSnapshot();
   })

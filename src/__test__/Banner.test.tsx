@@ -10,14 +10,14 @@ jest.mock('../services/api.ts', () => {
 jest.mock('../components/Filter')
 
 describe('Banner', () => {
-  test("Should render the banner", () => {
+  it("Should render the banner", () => {
     render(<Banner />)
     const element = screen.getByTestId('banner-box')
     expect(element).toBeInTheDocument()
     expect(element).toBeVisible()
   })
 
-  test("Should render banner text", () => {
+  it("Should render banner text", () => {
     render(<Banner />)
     const element = screen.getByTestId('banner-text')
     expect(element).toBeInTheDocument()
@@ -25,7 +25,7 @@ describe('Banner', () => {
     expect(element).toHaveTextContent('Milhões de filmes, séries e pessoas para descobrir. Explore já.')
   })
 
-  test("Should match snapshot", () => {
+  it("Should match snapshot", () => {
     const { container } = render(<Banner />)
     expect(container).toMatchSnapshot();
   })
