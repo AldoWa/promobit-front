@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Banner from '../components/Banner';
 
-jest.mock('../services/api.ts', () => {
-	return {
-    AUTHORIZATION: 'XXXX'
-  }
-})
-
 jest.mock('../components/Filter')
 
 describe('Banner', () => {

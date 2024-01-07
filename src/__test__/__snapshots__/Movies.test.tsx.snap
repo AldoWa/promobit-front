@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movies Should match snapshot 1`] = `
+<div>
+  <div
+    class="chakra-container css-sizgn0"
+  >
+    <p
+      class="chakra-text css-1mva2b3"
+    >
+      Nenhum filme encontrado
+    </p>
+    <div
+      class="chakra-stack css-z38eug"
+      data-testid="pagination-stack"
+    >
+      <div
+        class="chakra-stack css-1igwmid"
+        data-testid="pagination-pages"
+      >
+        <button
+          aria-labelledby="Ir para a página"
+          class="chakra-button css-1s4k305"
+          type="button"
+        >
+          1
+        </button>
+        <button
+          aria-labelledby="Ir para a página"
+          class="chakra-button css-1ie58vi"
+          type="button"
+        >
+          2
+        </button>
+        <button
+          aria-labelledby="Ir para a página"
+          class="chakra-button css-1ie58vi"
+          type="button"
+        >
+          3
+        </button>
+        <button
+          aria-labelledby="Ir para a página"
+          class="chakra-button css-1ie58vi"
+          type="button"
+        >
+          4
+        </button>
+        <button
+          aria-labelledby="Ir para a página"
+          class="chakra-button css-1ie58vi"
+          type="button"
+        >
+          5
+        </button>
+      </div>
+      <button
+        class="chakra-button css-ez23ye"
+        type="button"
+      >
+        &gt;
+      </button>
+      <button
+        class="chakra-button css-ez23ye"
+        data-testid="pagination-last-page"
+        type="button"
+      >
+        Última
+      </button>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;

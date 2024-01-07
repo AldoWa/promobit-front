@@ -66,7 +66,7 @@ const Movies: React.FC = () => {
         <Text fontSize='xl' color='black'>
           Nenhum filme encontrado
         </Text> :
-        <Grid templateColumns='repeat(6, 1fr)' gap='2rem' width='100%'>
+        <Grid templateColumns='repeat(6, 1fr)' gap='2rem' width='100%' data-testid="movies">
           {moviesFiltered.map(movie => (
             <MovieCard
               key={movie.title}
