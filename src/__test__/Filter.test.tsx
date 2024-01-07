@@ -2,12 +2,6 @@ import { GenresContextData } from '../context/genresContext';
 import { render, screen } from '../utils/test';
 import Filter from '../components/Filter';
 
-jest.mock('../services/api.ts', () => {
-	return {
-    AUTHORIZATION: 'XXXX'
-  }
-})
-
 describe('Filter', () => {
     const providerProps: GenresContextData = {
       genres: [
