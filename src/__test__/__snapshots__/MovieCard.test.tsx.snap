@@ -3,25 +3,31 @@
 exports[`MovieCard Should match snapshot 1`] = `
 <div>
   <div
-    class="css-u7hjmf"
+    class="css-9jm09p"
   >
-    <button>
+    <a
+      href="/details/1"
+    >
       <div
-        class="chakra-skeleton css-zeffls"
+        class="chakra-skeleton css-218kxs"
       />
       <p
-        class="chakra-text css-mgmy18"
+        class="chakra-text css-1ara00f"
         data-testid="movieCard-title"
       >
         Mortal Kombat
       </p>
       <p
-        class="chakra-text css-1x7nkyx"
+        class="chakra-text css-1hqom77"
         data-testid="movieCard-year"
       >
         2021
       </p>
-    </button>
+    </a>
   </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;
