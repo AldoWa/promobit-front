@@ -1,16 +1,18 @@
 import { GridItem, Image, Skeleton, Text } from '@chakra-ui/react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface MovieProps {
   src: string;
   title: string;
   year: string;
+  id: string;
 }
 
-const MovieCard: React.FC<MovieProps> = ({ title, year, src }) => {
+const MovieCard: React.FC<MovieProps> = ({ title, year, src, id }) => {
   return (
     <GridItem width={176} alignItems='start' justifyContent='start' >
-      <button>
+      <Link to={`/details/${id}`}>
         <Image
           src={src}
           alt={`Movie ${title}`}
@@ -30,7 +32,7 @@ const MovieCard: React.FC<MovieProps> = ({ title, year, src }) => {
           mt="4px"
           data-testid="movieCard-year"
         >{year}</Text>
-      </button>
+      </Link>
     </GridItem>
   );
 };
