@@ -1,7 +1,7 @@
-import { Box, CircularProgress, CircularProgressLabel, Container, HStack, Heading, Image, Text, VStack } from '@chakra-ui/react';
+import { Box, CircularProgress, CircularProgressLabel, Container, HStack, Heading, Image, Skeleton, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 
-interface BannerMovieProps {
+export interface BannerMovieProps {
   title: string;
   imageUrl: string;
   avaliation: number;
@@ -26,6 +26,8 @@ const BannerMovie: React.FC<BannerMovieProps> = ({ title, imageUrl, credits, ava
             w={383}
             h={574}
             src={imageUrl}
+            alt='Banner movie'
+            fallback={<Skeleton w={600} h={574} borderRadius={4} />}
           ></Image>
           <VStack alignItems='start' gap={0}>
             <Heading as='h3' size="xl" color='white'>{ title }</Heading>
@@ -39,9 +41,9 @@ const BannerMovie: React.FC<BannerMovieProps> = ({ title, imageUrl, credits, ava
               <Text color='white' fontSize='sm' mt={2}>Avaliação dos usuários</Text>
             </HStack>
             <Heading as='h5' size="md" color='white' mt={8}>Sinopse</Heading>
-            <Text noOfLines={5} fontSize='1rem' lineHeight={6} color='#dddddd' mt={2}>
+            { overview && <Text noOfLines={5} fontSize='1rem' lineHeight={6} color='#dddddd' mt={2}>
               { overview }
-            </Text>
+            </Text> }
             <HStack gap='60px' mt={6}>
               { credits.map(credit => (
                 <VStack key={credit.name} alignItems='flex-start' gap={0}>

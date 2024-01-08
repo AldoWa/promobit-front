@@ -24,7 +24,7 @@ interface MoviesResponse {
 
 const Movies: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([])
-  const [maxTotalPages,] = useState<number>(500)
+  const [maxTotalPages] = useState<number>(500)
   const [actualPage, setActualPage] = useState<number>(1)
 
   const { genresIDsSelected, resetGenresSelected } = useContext(GenresContext)
@@ -47,8 +47,6 @@ const Movies: React.FC = () => {
 
       setMovies(data.results)
       setActualPage(data.page)
-
-   
     } catch (error) {
       console.log(error)
     }
