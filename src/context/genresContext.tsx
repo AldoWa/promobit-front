@@ -1,4 +1,4 @@
-import { createContext, useCallback, useEffect, useState } from 'react';
+import { createContext, useCallback, useEffect, useMemo, useState } from 'react';
 
 import api from '../services/api';
 
@@ -6,7 +6,7 @@ interface GenresProviderProps {
   children: React.ReactNode;
 }
 
-interface Genre {
+export interface Genre {
   id: number;
   name: string;
 }
@@ -25,9 +25,9 @@ export interface GenresContextData {
 export const GenresContext = createContext<GenresContextData>(
   {} as GenresContextData
 );
-export function GenresProvider({ children }: GenresProviderProps) {
+export function GenresProvider({ children }: Readonly<GenresProviderProps>) {
   const [genres, setGenres] = useState<Genre[]>([]);
-  const [genresIDsSelected, setGenresSelected] = useState<number[]>([]);
+  const [genresIDsSelected, setGenresIDsSelected] = useState<number[]>([]);
 
   useEffect(() => {
     const getGenres = async () => {
@@ -40,15 +40,15 @@ export function GenresProvider({ children }: GenresProviderProps) {
   }, [])
 
   const addGenreSelected = useCallback((id: number) => {
-    setGenresSelected([...genresIDsSelected, id])
+    setGenresIDsSelected([...genresIDsSelected, id])
   }, [genresIDsSelected])
 
   const removeGenreSelected = useCallback((id: number) => {
     const newGenres = genresIDsSelected.filter(genre => genre !== id)
-    setGenresSelected(newGenres)
+    setGenresIDsSelected(newGenres)
   }, [genresIDsSelected])
 
-  const resetGenresSelected = useCallback(() => setGenresSelected([]), [])
+  const resetGenresSelected = useCallback(() => setGenresIDsSelected([]), [])
 
   const handleGenre = useCallback((id: number, type: 'add' | 'remove') => {
     if (type === 'add') {
@@ -59,8 +59,10 @@ export function GenresProvider({ children }: GenresProviderProps) {
   }, [addGenreSelected, removeGenreSelected])
 
 
+  const valueProviderMemo = useMemo(() => ({ genres, genresIDsSelected, handleGenre, resetGenresSelected }), [genres, genresIDsSelected, handleGenre, resetGenresSelected])
+
   return (
-    <GenresContext.Provider value={{ genres, genresIDsSelected, handleGenre, resetGenresSelected }}>
+    <GenresContext.Provider value={valueProviderMemo}>
       {children}
     </GenresContext.Provider>
   );

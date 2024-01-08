@@ -1,20 +1,27 @@
 import React from 'react';
 
 import Header from '../components/Header';
-import BannerMovie from '../components/BannerMovie';
+import BannerMovie, { BannerMovieProps } from '../components/BannerMovie';
+import { useLoaderData } from 'react-router-dom';
+
+interface UseLoaderData {
+  details: Omit<BannerMovieProps, 'credits' | 'screenPlay'>;
+}
 
 const DetailsMovie: React.FC = () => {
+  const { details } = useLoaderData() as UseLoaderData
+
   return (
     <>
       <Header />
       <BannerMovie
-        avaliation={50}
+        avaliation={details.avaliation}
         credits={[{ type: 'Director', name: 'Ator 1' },{ type: 'Director', name: 'Ator 1' }]}
-        imageUrl='https://image.tmdb.org/t/p/original/3CezGI4ORSgVKk5Ch3UUWtL7SET.jpg'
-        overview='Lorem ipsum dolor sit amet'
+        imageUrl={details.imageUrl}
+        overview={details.overview}
         screenPlay={[{ type: 'Director', name: 'Ator 1' }]}
-        subtitle='16 anos  • 11/02/2016 (BR)  •  Ação, Aventura, Comédia, Ficção científica • 1h 47m'
-        title='Filme 1'
+        subtitle={details.subtitle}
+        title={details.title}
         key={1}
       />
     </>
