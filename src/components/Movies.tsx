@@ -13,6 +13,7 @@ interface Movie {
   poster_path: string;
   release_date: string;
   genre_ids: number[];
+  id: string;
 }
 
 interface MoviesResponse {
@@ -73,6 +74,7 @@ const Movies: React.FC = () => {
               src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
               title={movie.title}
               year={movie.release_date}
+              id={movie.id}
             />
           ))}
         </Grid>
