@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner Should match snapshot 1`] = `
+<div>
+  <div
+    class="css-pnnn0m"
+    data-testid="banner-movie-box"
+  >
+    <div
+      class="chakra-container css-1kw8fss"
+      data-testid="banner-movie-container"
+    >
+      <div
+        class="chakra-stack css-jlor57"
+      >
+        <div
+          class="chakra-skeleton css-8ysys1"
+        />
+        <div
+          class="chakra-stack css-mw8ufx"
+        >
+          <h3
+            class="chakra-heading css-y5314g"
+            data-testid="banner-movie-title"
+          >
+            Teste Title
+          </h3>
+          <p
+            class="chakra-text css-vtk0uk"
+            data-testid="banner-movie-subtitle"
+          >
+            Teste | Subtitle
+          </p>
+          <div
+            class="chakra-stack css-ut3x8m"
+          >
+            <div
+              class="css-hmral"
+            >
+              <div
+                aria-valuemax="100"
+                aria-valuemin="0"
+                aria-valuenow="10"
+                class="chakra-progress css-1kj616h"
+                role="progressbar"
+              >
+                <svg
+                  class="css-1k0co84"
+                  viewBox="0 0 100 100"
+                >
+                  <circle
+                    class="chakra-progress__track css-nj4szp"
+                    cx="50"
+                    cy="50"
+                    r="42"
+                    stroke-width="10px"
+                  />
+                  <circle
+                    class="chakra-progress__indicator css-xowg6v"
+                    cx="50"
+                    cy="50"
+                    r="42"
+                    stroke-dasharray="26.400000000000002 237.6"
+                    stroke-dashoffset="66"
+                    stroke-width="10px"
+                  />
+                </svg>
+                <div
+                  class="css-158rzxq"
+                  data-testid="banner-movie-avaliation"
+                >
+                  10
+                  %
+                </div>
+              </div>
+            </div>
+            <p
+              class="chakra-text css-1u8wf1z"
+            >
+              Avaliação dos usuários
+            </p>
+          </div>
+          <h5
+            class="chakra-heading css-1k02bmm"
+          >
+            Sinopse
+          </h5>
+          <p
+            class="chakra-text css-1r0a2rl"
+            data-testid="banner-movie-overview"
+          >
+            Teste Overview
+          </p>
+          <div
+            class="chakra-stack css-mqdrn6"
+            data-testid="banner-movie-directors"
+          >
+            <div
+              class="chakra-stack css-enj3l8"
+            >
+              <p
+                class="chakra-text css-1xzcys3"
+              >
+                Ator 1
+              </p>
+              <p
+                class="chakra-text css-14om7b3"
+              >
+                Director
+              </p>
+            </div>
+            <div
+              class="chakra-stack css-enj3l8"
+            >
+              <p
+                class="chakra-text css-1xzcys3"
+              >
+                Ator 2
+              </p>
+              <p
+                class="chakra-text css-14om7b3"
+              >
+                Director
+              </p>
+            </div>
+          </div>
+          <div
+            class="chakra-stack css-mqdrn6"
+            data-testid="banner-movie-screenplay"
+          >
+            <div
+              class="chakra-stack css-enj3l8"
+            >
+              <p
+                class="chakra-text css-1xzcys3"
+              >
+                Ator 1
+              </p>
+              <p
+                class="chakra-text css-14om7b3"
+              >
+                Director
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;
