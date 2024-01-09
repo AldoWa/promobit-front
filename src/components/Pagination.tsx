@@ -2,7 +2,7 @@ import { Button, HStack } from '@chakra-ui/react';
 import React, { useCallback, useEffect, useState } from 'react';
 
 interface PaginationProps {
-  handlePage: (page: number) => void;
+  handlePage: (page: number) => Promise<void>;
   maxTotalPages: number;
   actualPage: number;
 }

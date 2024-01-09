@@ -6,8 +6,7 @@ describe('Pagination', () => {
     render(<Pagination
       actualPage={1}
       maxTotalPages={10}
-      handlePage={() => {}}
-     
+      handlePage={() => Promise.resolve()}
     />)
 
     const paginationStack = screen.getByTestId('pagination-stack');
@@ -22,7 +21,7 @@ describe('Pagination', () => {
     render(<Pagination
       actualPage={1}
       maxTotalPages={10}
-      handlePage={() => {}}
+      handlePage={() => Promise.resolve()}
     />)
 
     const paginationLastPage = screen.queryByTestId('pagination-last-page');
@@ -36,7 +35,7 @@ describe('Pagination', () => {
     render(<Pagination
       actualPage={10}
       maxTotalPages={10}
-      handlePage={() => {}}
+      handlePage={() => Promise.resolve()}
     />)
 
     const paginationLastPage = screen.queryByTestId('pagination-last-page');
@@ -50,7 +49,7 @@ describe('Pagination', () => {
     render(<Pagination
       actualPage={5}
       maxTotalPages={10}
-      handlePage={() => {}}
+      handlePage={() => Promise.resolve()}
     />)
 
     const pages = screen.getByTestId('pagination-pages').childNodes;
@@ -84,7 +83,7 @@ describe('Pagination', () => {
     const { container } = render(<Pagination
       actualPage={5}
       maxTotalPages={10}
-      handlePage={() => {}}
+      handlePage={() => Promise.resolve()}
     />)
     expect(container).toMatchSnapshot();
   });

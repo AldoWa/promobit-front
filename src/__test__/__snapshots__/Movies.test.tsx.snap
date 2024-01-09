@@ -3,7 +3,7 @@
 exports[`Movies Should match snapshot 1`] = `
 <div>
   <div
-    class="chakra-container css-sizgn0"
+    class="chakra-container css-7sj89i"
   >
     <p
       class="chakra-text css-1mva2b3"
@@ -11,7 +11,7 @@ exports[`Movies Should match snapshot 1`] = `
       Nenhum filme encontrado
     </p>
     <div
-      class="chakra-stack css-z38eug"
+      class="chakra-stack css-7e2ce"
       data-testid="pagination-stack"
     >
       <div

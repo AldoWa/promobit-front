@@ -27,11 +27,15 @@ export interface CreditsResponse {
   crew: Person[]
 }
 
-export interface RecomendationsResponse {
+export interface Movie {
   poster_path: string;
-  id: number;
+  id: string;
   title: string;
   release_date: string;
+}
+
+export interface RecomendationsResponse {
+  results: Movie[]
 }
 
 export interface VideoResponse {
