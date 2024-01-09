@@ -1,30 +1,58 @@
-# React + TypeScript + Vite
+<br/>
+<p align="center">
+  <h3 align="center">Project to study</h3>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About The Project
 
-Currently, two official plugins are available:
+![Screen Shot](https://i.ibb.co/Sv06w4r/image.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It's a project from a Promobit Test, to training front and testing skills
 
-## Expanding the ESLint configuration
+## Built With
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+React, React Router Dom, Chakra UI, Vite, Jest and React Testing Library
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Prerequisites
+
+Pre requisits to run the project:
+
+* npm
+
+```sh
+npm install npm@latest -g
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Installation
+
+1. Get a free API Key at [themoviedb](https://developer.themoviedb.org/reference/intro/getting-started)
+
+2. Clone the repo
+
+```sh
+git clone https://github.com/AldoWa/promobit-front
+```
+
+3. Install NPM packages
+
+```sh
+npm install
+```
+3. Create a .env.local
+```JS
+VITE_API_MOVIE_KEY=[KEY]
+VITE_API_MOVIE_AUTHORIZATION=[TOKEN]
+```
+
+4. Run:
+
+```JS
+npm run dev
+```
+
+## Authors
+
+* **Aldo** - *Front-end Developer* - [Aldo](https://github.com/AldoWa) - *Building the site*
+
