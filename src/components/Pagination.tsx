@@ -39,7 +39,7 @@ const Pagination: React.FC<PaginationProps> = ({ handlePage, maxTotalPages, actu
   }, [actualPage, createPagination])
 
   return (
-    <HStack justifyContent='center' my={70} data-testid="pagination-stack">
+    <HStack justifyContent='center' mt={70} data-testid="pagination-stack">
       {actualPage > 1 && <Button onClick={() => handleNewPage(1)} data-testid="pagination-first-page">Primeira</Button>}
       {actualPage > 1 && <Button onClick={() => handleNewPage(actualPage - 1)}>{'<'}</Button>}
       <HStack data-testid="pagination-pages">

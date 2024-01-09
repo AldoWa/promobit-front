@@ -24,12 +24,12 @@ const router = createBrowserRouter([
         title: details.data.title,
         imageUrl: `https://image.tmdb.org/t/p/original${details.data.poster_path}`,
         avaliation: Math.floor(details.data.vote_average * 10),
-        subtitle: `16 anos • ${formatDate(details.data.release_date)} • ${details.data.genres.map(genre => genre.name).join(', ')} • ${formatTime(details.data.runtime)}`,
+        subtitle: `${formatDate(details.data.release_date)} • ${details.data.genres.map(genre => genre.name).join(', ')} • ${formatTime(details.data.runtime)}`,
         overview: details.data.overview,
       },
       credits: credits.data,
       recommendations: recommendations.data,
-      video: `https://www.youtube.com/watch?v=${videos.data.results.length > 0 ? videos.data.results[0].key : ''}`,
+      video: videos.data.results.length > 0 ? `https://www.youtube.com/embed/${videos.data.results.find(result => result.type === 'Trailer')?.key }` : '' ,
     }
   } },
 ]);

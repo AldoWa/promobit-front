@@ -60,7 +60,7 @@ const Movies: React.FC = () => {
   const moviesFiltered = movies.filter(movie => moviesFilter(movie))
 
   return (
-    <Container maxW='1250px' mt={30}>
+    <Container maxW='1250px' py={30}>
       {moviesFiltered.length === 0 ?
         <Text fontSize='xl' color='black'>
           Nenhum filme encontrado
