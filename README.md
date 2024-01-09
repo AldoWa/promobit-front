@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <h3 align="center">Project to study</h3>
+  <h3 align="center">Welcome to the promobit-front 🤝</h3>
 </p>
 
 ## About The Project
