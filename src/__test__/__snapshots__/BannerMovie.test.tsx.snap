@@ -14,7 +14,7 @@ exports[`Banner Should match snapshot 1`] = `
         class="chakra-stack css-jlor57"
       >
         <div
-          class="chakra-skeleton css-8ysys1"
+          class="chakra-skeleton css-m149th"
         />
         <div
           class="chakra-stack css-mw8ufx"
@@ -85,6 +85,7 @@ exports[`Banner Should match snapshot 1`] = `
           >
             Sinopse
           </h5>
+           
           <p
             class="chakra-text css-1r0a2rl"
             data-testid="banner-movie-overview"

@@ -3,7 +3,7 @@
 exports[`Pagination Should match snapshot 1`] = `
 <div>
   <div
-    class="chakra-stack css-z38eug"
+    class="chakra-stack css-7e2ce"
     data-testid="pagination-stack"
   >
     <button

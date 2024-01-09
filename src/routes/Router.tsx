@@ -8,7 +8,7 @@ import DetailsMovie from '../pages/DetailsMovie';
 import api from '../services/api';
 
 import { formatTime,formatDate } from '../utils/dateHours';
-import { DetailsResponse, VideoResponse, CreditsResponse, RecomendationsResponse } from '../types/axiosResponse';
+import { DetailsResponse, VideoResponse, CreditsResponse, RecomendationsResponse } from '../types/index';
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         overview: details.data.overview,
       },
       credits: credits.data,
-      recommendations: recommendations.data,
+      recommendations: recommendations.data.results,
       video: videos.data.results.length > 0 ? `https://www.youtube.com/embed/${videos.data.results.find(result => result.type === 'Trailer')?.key }` : '' ,
     }
   } },

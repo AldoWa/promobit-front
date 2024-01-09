@@ -1,5 +1,5 @@
 import { Box, Card, CardBody, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import { Cast as CastInterface } from "../types/axiosResponse";
+import { Cast as CastInterface } from "../types/index";
 
 interface CastProps {
   items: CastInterface[];
