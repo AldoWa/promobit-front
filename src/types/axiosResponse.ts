@@ -10,6 +10,10 @@ export interface DetailsResponse {
   overview: string;
 }
 
+export interface Cast extends Person{
+  character: string;
+}
+
 interface Person {
   character: string;
   order: number;
@@ -19,7 +23,7 @@ interface Person {
 }
 
 export interface CreditsResponse {
-  cast: Person[]
+  cast: Cast[]
   crew: Person[]
 }
 
