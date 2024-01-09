@@ -37,5 +37,6 @@ export interface RecomendationsResponse {
 export interface VideoResponse {
   results: {
     key: string;
+    type: 'Trailer' | 'Behind the Scenes';
   }[]
 }
