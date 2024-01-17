@@ -11,7 +11,7 @@ It's a project from a Promobit Test, to training front and testing skills
 
 ## Built With
 
-React, React Router Dom, Chakra UI, Vite, Jest and React Testing Library
+React, React Router Dom, Chakra UI, Vite, Jest, React Testing Library and Docker
 
 ## Getting Started
 
